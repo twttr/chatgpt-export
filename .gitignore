@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+
+# Exports/working data — never commit
+chatgpt-export-*.json
+chatgpt-export-*/

@@ -1,0 +1,15 @@
+{
+  "name": "chatgpt-export",
+  "version": "1.2.0",
+  "description": "Bulk export ChatGPT conversations including Team workspaces and Projects, with attachments and an HTML viewer.",
+  "private": true,
+  "scripts": {
+    "split": "node scripts/split-export.js",
+    "merge": "node scripts/merge-export.js",
+    "viewer": "node scripts/build-viewer.js",
+    "verify": "node scripts/verify-export.js"
+  },
+  "dependencies": {
+    "marked": "^18.0.3"
+  }
+}

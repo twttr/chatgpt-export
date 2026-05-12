@@ -157,6 +157,45 @@
     }
     .footer a { color: #60a5fa; text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
+    .resume-info {
+      background: #1a2f1a;
+      border: 1px solid #2d4a2d;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+      color: #86efac;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .resume-text { flex: 1; }
+    .clear-btn {
+      background: none;
+      border: 1px solid #2d4a2d;
+      border-radius: 4px;
+      color: #86efac;
+      font-size: 11px;
+      padding: 2px 8px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .clear-btn:hover { border-color: #86efac; }
+    .btn-stop {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ef4444;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: #ef4444;
+      transition: all 0.2s;
+    }
+    .btn-stop:hover { background: #ef444420; }
+    .btn-stop:disabled { opacity: 0.5; cursor: not-allowed; }
     .log-area {
       display: none;
       background: #0d1117;
@@ -221,12 +260,18 @@
     </div>
   </div>
 
+  <div id="resumeInfo" class="resume-info" style="display:none">
+    <span class="resume-text"></span>
+    <button id="clearBtn" class="clear-btn">Clear</button>
+  </div>
+
   <button id="exportBtn" class="btn btn-primary">Export All Conversations</button>
+  <button id="stopBtn" class="btn btn-stop" style="display:none">Stop &amp; Save Progress</button>
 
   <div id="logArea" class="log-area"></div>
 
   <div class="footer">
-    <a href="https://github.com/hoya98/chatgpt-export" target="_blank">GitHub</a> &middot; v1.0.0
+    <a href="https://github.com/twttr/chatgpt-export" target="_blank">GitHub</a> &middot; v1.2.0
   </div>
 
   <script src="popup.js"></script>
